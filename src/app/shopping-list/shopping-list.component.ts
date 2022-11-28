@@ -20,4 +20,10 @@ export class ShoppingListComponent implements OnInit {
       }
      );
   }
+
+  addItem(x: string) {
+    console.log("_______________________________________________")
+    this.newItemEvent.emit(x)
+    this._testService.updateSelectedUser();
+  }
 }

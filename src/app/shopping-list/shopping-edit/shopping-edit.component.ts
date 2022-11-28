@@ -10,6 +10,7 @@ import { ShoppingListService } from '../shopping-list.service';
 export class ShoppingEditComponent implements OnInit {
   @ViewChild('nameInput') nameInputRef: ElementRef;
   @ViewChild('amountInput') amountInputRef: ElementRef;
+  name: 'Food';
 
   constructor(private slService: ShoppingListService) { }
 
@@ -21,5 +22,9 @@ export class ShoppingEditComponent implements OnInit {
     const ingAmount = this.amountInputRef.nativeElement.value;
     const newIngredient = new Ingredient(ingName, ingAmount);
     this.slService.addIngredient(newIngredient);
+  }
+  updateName(value: string) {
+    console.log("value",value);
+    this.name = value;
   }
 }

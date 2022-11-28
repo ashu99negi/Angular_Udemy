@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeStartComponent implements OnInit {
 
+  student: IData = {
+    name: 'Ashish',
+    age: 23,
+  };
+  dropDownValue = "food";
   constructor() { }
 
   ngOnInit(): void {

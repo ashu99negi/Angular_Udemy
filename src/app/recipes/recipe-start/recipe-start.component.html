@@ -1,1 +1,8 @@
 <h3>Please select a Recipe!!</h3>
+
+<div [ngSwitch] = 'dropDownValue'>
+    <h3 *ngSwitchCase="'Bu'">Burger</h3>
+    <h3 *ngSwitchCase="'Cd'">Cold drink</h3>
+    <h3 *ngSwitchCase="'Ch'">Chines</h3>
+    <h3 *ngSwitchDefault="">You have not selected any Food</h3>
+  </div>
