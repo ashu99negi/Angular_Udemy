@@ -3,30 +3,6 @@
     <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail
-      *ngIf="selectedRecipe; else infoText"
-      [recipe]="selectedRecipe"
-    ></app-recipe-detail>
-    <ng-template #infoText>
-      <p>Please select a Recipe!</p>
-    </ng-template>
+    <router-outlet></router-outlet>
   </div>
-</div>
-<div>
-  <label for="name">Name: </label>
-  <input id="name" type="text" [formControl]="name">
-  <button type="button" (click)="updateName()">Update Name</button>
-
-  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-
-      <label for="first-name">First Name: </label>
-      <input id="first-name" type="text" formControlName="fName">
-    
-      <label for="last-name">Last Name: </label>
-      <input id="last-name" type="text" formControlName="lName">
-
-      <button type="submit" [disabled]="!profileForm.valid">submit</button>
-    
-  </form>
-
 </div>
